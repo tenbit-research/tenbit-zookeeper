@@ -10,7 +10,36 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>practice</artifactId>
+    <artifactId>mypractice</artifactId>
 
+    <properties>
+
+        <zookeeper.version>3.4.14</zookeeper.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <type>pom</type>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper.version}</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
